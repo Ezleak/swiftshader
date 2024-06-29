@@ -50,7 +50,7 @@ jobs:
           mv build/libvk_swiftshader.so /tmp/swiftshader -v
 
       - name: Upload libraries
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v4
         with:
           name: swiftshader_${{matrix.arch}}
           path: /tmp/swiftshader
