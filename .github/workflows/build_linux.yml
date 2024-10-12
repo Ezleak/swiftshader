@@ -2,11 +2,7 @@ name: SwiftShader - Linux
 
 on:
   push:
-    branches:
-      - master
   pull_request:
-    branches:
-      - master
 
 jobs:
   run-pragma-server:
@@ -35,7 +31,7 @@ jobs:
       - name: Update Nightly Tag
         uses: rickstaa/action-create-tag@v1.3.9
         continue-on-error: true
-        if: runner.os == 'Linux'
+        if: runner.os == 'Android'
         with:
           tag: "latest"
           force_push_tag: true
